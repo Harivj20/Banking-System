@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grip_Bank</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+   
+      <table border="2">
+          <thead>
+              <th>S.no</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Amount</th>
+              <th>Date</th>
+          </thead>
+          <tbody>
+            {% for i in transactions %}
+              <tr>
+                  <td>{{ i.id }}</td>
+                  <td>{{ i.sender }}</td>
+                  <td>{{ i.receiver }}</td>
+                  <td>{{ i.amount }}</td>
+                  <td>{{ i.date }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+
+      </table>
+     
+   
+    
+    
+</body>
+</html>
